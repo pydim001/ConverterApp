@@ -4,9 +4,7 @@ import React, { useState } from 'react';
 
 export default function Conversion(prop) {
   const [selectedField, setSelectedField] = useState("Area");
-  const units = ["Area", "Currency", "Data Tranfer Rate", "Digital Storage",
-    "Energy", "Frequency", "Fuel Economy", "Length", "Mass", "Plane Angle",
-    "Pressure", "Speed", "Temperature", "Time", "Volume"];
+  const units = require("../assets/fields.json");
 
   return (
     <View style={styles.container}>
@@ -14,9 +12,8 @@ export default function Conversion(prop) {
         selectedValue={selectedField}
         style={styles.unitPicker}
         onValueChange={itemValue => {
-          console.log(selectedField);
           setSelectedField(itemValue);
-          prop.setConversionUnit(selectedField);
+          prop.setConversionUnit(itemValue);
         }}>
         {units.map(unit => (<Picker.Item label={unit} value={unit} />))}
       </Picker>
@@ -30,7 +27,7 @@ const styles = StyleSheet.create({
   },
   unitPicker: {
     height: 50,
-    width: 200,
+    width: 250,
     marginTop: 30,
     paddingBottom: 180
   }

@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   },
   firstUnit: {
     height: 50,
-    width: 200
+    width: 275
   },
   firstInput: {
     borderWidth: 1,
