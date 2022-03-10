@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
-import { Picker } from '@react-native-picker/picker'
 import Conversion from './components/Coversion';
 import Header from './components/Header';
+import Units from './components/Units';
 
 export default function App() {
 
@@ -27,13 +27,7 @@ export default function App() {
       <Header />
       <Conversion setConversionUnit={(conversion) => setSelectedValue(conversion)} />
       <View style={styles.container}>
-        <Picker
-          selectedValue={selectedUnit}
-          style={styles.firstUnit}
-          onValueChange={itemValue => (setSelectedUnit(itemValue))}>
-          {allUnits[selectedValue].map(unit => (<Picker.Item label={unit} value={unit} />))}
-          <TextInput />
-        </Picker>
+        <Units unit={selectedValue} />
         <TextInput
           style={styles.firstInput}
           keyboardType='numeric'
@@ -44,13 +38,7 @@ export default function App() {
         <Button title="↑↓" color="black" onPress={btnAction} />
       </View>
       <View style={styles.container}>
-        <Picker
-          selectedValue={secondUnit}
-          style={styles.firstUnit}
-          onValueChange={itemValue => (setSecondUnit(itemValue))}>
-          {allUnits[selectedValue].map(unit => (<Picker.Item label={unit} value={unit} />))}
-          <TextInput />
-        </Picker>
+        <Units unit={selectedValue} />
         <Text style={styles.conversion}>{converted}</Text>
       </View>
     </View>

@@ -47,18 +47,84 @@
         "Petabit",
         "Pebibit"
     ],
-    "Energy": [],
-    "Frequency": [],
-    "Fuel Economy": [],
-    "Length": [],
-    "Mass": [],
-    "Plane Angle": [],
-    "Pressure": [],
-    "Speed": [],
+    "Energy": [
+        "Joule",
+        "Kilojoule",
+        "Gram calorie",
+        "Kilocalorie",
+        "Watt hour",
+        "Kilowatt hour",
+        "Electronvolt",
+        "British Thermal Unit",
+        "US therm",
+        "Foot-pound"
+    ],
+    "Frequency": [
+        "Hertz",
+        "Kilohertz",
+        "Megahertz",
+        "Gigahertz",
+        "Terahertz",
+        "Petahertz"
+    ],
+    "Fuel Economy": [
+        "Miles per Gallon",
+        "Miles per Gallon (Imp)",
+        "Kilometers per liter",
+        "Liters per 100 kilometer"
+    ],
+    "Length": [
+        "Nanometer",
+        "Micrometer",
+        "Millimeter",
+        "Centimeter",
+        "Inch",
+        "Foot",
+        "Yard",
+        "Meter",
+        "Kilometer",
+        "Nautical Mile",
+        "Mile"
+    ],
+    "Mass": [
+        "Microgram",
+        "Milligram",
+        "Gram",
+        "Ounce",
+        "Pound",
+        "Kilogram",
+        "Stone",
+        "US ton",
+        "Imperial ton",
+        "Metric ton"
+    ],
+    "Plane Angle": [
+        "Milliradian",
+        "Radian",
+        "Degree",
+        "Gradian",
+        "Minute of arc",
+        "Second of arc"
+    ],
+    "Pressure": [
+        "Standard atmosphere",
+        "Bar",
+        "Pounds per square inch",
+        "Torr",
+        "Pascal"
+    ],
+    "Speed": [
+        "Meter per second",
+        "Knot",
+        "Miles per hour",
+        "Foot per second",
+        "Kilometer per hour"
+    ],
     "Temperature": [
         "Celsius",
         "Farenheit",
-        "Kelvin"
+        "Kelvin",
+        "Rankine"
     ],
     "Time": [
         "Nanosecond",
