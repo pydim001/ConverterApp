@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
-export default function Settings() {
+export default function Search() {
     return (
-        <View style={styles.settingBtn}>
+        <View style={styles.searchBtn}>
             <TouchableOpacity style={styles.press}>
                 <Image
-                    source={require('../assets/settings.png')}
+                    source={require('../assets/search.png')}
                     style={styles.image} />
             </TouchableOpacity>
         </View>
@@ -15,12 +15,12 @@ export default function Settings() {
 
 const styles = StyleSheet.create({
     image: {
-        width: 40,
-        height: 40
+        width: 35,
+        height: 35
     },
-    settingBtn: {
-        marginTop: -40,
-        marginLeft: 10,
+    searchBtn: {
+        marginLeft: 325,
+        marginTop: 65,
         width: 45
     },
     press: {

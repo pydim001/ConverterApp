@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import Conversion from './components/Coversion';
 import Header from './components/Header';
 import Units from './components/Units';
+import Settings from './components/Settings';
+import Search from './components/Search';
 
 export default function App() {
 
@@ -25,6 +27,8 @@ export default function App() {
   return (
     <View>
       <Header />
+      <Search />
+      <Settings />
       <Conversion setConversionUnit={(conversion) => setSelectedValue(conversion)} />
       <View style={styles.container}>
         <Units unit={selectedValue} />
@@ -47,17 +51,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center'
-  },
-  unitPicker: {
-    height: 50,
-    width: 200,
-    marginTop: 10,
-    paddingBottom: 200
-  },
-  firstUnit: {
-    height: 50,
-    width: 275
+    alignItems: 'center',
+    marginTop: 5
   },
   firstInput: {
     borderWidth: 1,

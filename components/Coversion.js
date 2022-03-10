@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   unitPicker: {
     height: 50,
     width: 250,
-    marginTop: 30,
+    marginTop: -5,
     paddingBottom: 180
   }
 })
