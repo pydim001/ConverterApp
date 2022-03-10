@@ -10,7 +10,9 @@
         "Acre"
     ],
     "Currency": [
-        "US Dollars"
+        "US Dollars",
+        "Indian Rupees",
+        "Russian Ruble"
     ],
     "Data Tranfer Rate": [
         "Bit Per Second",
