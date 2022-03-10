@@ -30,6 +30,7 @@ export default function App() {
       <Search />
       <Settings />
       <Conversion setConversionUnit={(conversion) => setSelectedValue(conversion)} />
+      <View style={styles.hr} />
       <View style={styles.container}>
         <Units unit={selectedValue} />
         <TextInput
@@ -76,5 +77,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     backgroundColor: 'lightblue',
   },
-
+  hr: {
+    borderBottomColor: 'gray',
+    borderBottomWidth: 0.5,
+    width: 300,
+    marginTop: 15,
+    marginBottom: -20,
+    alignSelf: 'center'
+  }
 });
