@@ -13,6 +13,10 @@ export default function Settings() {
     )
 }
 
+class SettingsScreen extends React.Component {
+
+}
+
 const styles = StyleSheet.create({
     image: {
         width: 40,

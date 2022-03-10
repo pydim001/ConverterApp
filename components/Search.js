@@ -13,6 +13,10 @@ export default function Search() {
     )
 }
 
+class SearchScreen extends React.Component {
+
+}
+
 const styles = StyleSheet.create({
     image: {
         width: 35,

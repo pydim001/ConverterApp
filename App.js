@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import Conversion from './components/Coversion';
@@ -14,7 +13,7 @@ export default function App() {
   const [secondUnit, setSecondUnit] = useState("Square Miles");
   const [tempState, setTempState] = useState(secondUnit);
   const [value, setValue] = useState(0);
-  var converted = 5;
+  const [converted, setConverted] = useState();
   const units = require("./assets/fields.json");
   const allUnits = require("./assets/conversion.json");
 
@@ -37,7 +36,10 @@ export default function App() {
           style={styles.firstInput}
           keyboardType='numeric'
           returnKeyType='done'
-          onChangeText={val => (setValue(val))} />
+          onChangeText={val => {
+            setValue(val)
+            setConverted(val)
+          }} />
       </View>
       <View style={styles.switchBtn}>
         <Button title="↑↓" color="black" onPress={btnAction} />
