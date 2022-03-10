@@ -13,8 +13,14 @@ export default function Settings() {
     )
 }
 
-class SettingsScreen extends React.Component {
+export class SettingsScreen extends React.Component {
+    render() {
+        return (
+            <View>
 
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({

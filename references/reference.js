@@ -4,11 +4,11 @@ import Home from "./screens/Home";
 import Navigator from "./routes/AppStack";
 
 export default function App() {
-  return (
-    <View>
-      <Navigator />
-    </View>
-  )
+    return (
+        <View>
+            <Home />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({

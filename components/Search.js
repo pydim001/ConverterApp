@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { exp } from "react-native/Libraries/Animated/Easing";
 
 export default function Search() {
     return (
@@ -13,8 +14,14 @@ export default function Search() {
     )
 }
 
-class SearchScreen extends React.Component {
+export class SearchScreen extends React.Component {
+    render() {
+        return (
+            <View>
 
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
@@ -31,3 +38,4 @@ const styles = StyleSheet.create({
 
     }
 })
+
