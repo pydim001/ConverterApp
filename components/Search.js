@@ -1,8 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
-import { exp } from "react-native/Libraries/Animated/Easing";
 
-export default function Search(props) {
+export default function Search() {
     return (
         <View style={styles.searchBtn}>
             <TouchableOpacity style={styles.press}>
@@ -20,7 +19,7 @@ const styles = StyleSheet.create({
         height: 35
     },
     searchBtn: {
-        marginLeft: 325,
+        marginLeft: 335,
         marginTop: 65,
         width: 45
     },

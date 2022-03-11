@@ -1,19 +1,29 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 
-export default function ReviewScreen() {
+export default function ReviewScreen({ navigation }) {
     return (
-        <View style={styles.header}>
-            <Text>
-                Reviews
-            </Text>
+        <View>
+            <View style={styles.back}>
+                <Button
+                    title="Back"
+                    onPress={() => { navigation.navigate('Home') }} />
+            </View>
+            <View style={styles.header}>
+                <Text>
+                    Reviews & Ideas
+                </Text>
+            </View>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     header: {
-        paddingTop: 90,
         alignItems: 'center'
+    },
+    back: {
+        paddingTop: 50,
+        alignItems: 'flex-start'
     }
 })
