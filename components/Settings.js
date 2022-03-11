@@ -1,26 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 
-export default function Settings() {
+export default function Settings(props) {
     return (
         <View style={styles.settingBtn}>
-            <TouchableOpacity style={styles.press}>
+            <TouchableOpacity style={styles.press} onPress={() => { props.navigation.navigate('Settings') }}>
                 <Image
                     source={require('../assets/settings.png')}
                     style={styles.image} />
             </TouchableOpacity>
         </View>
     )
-}
-
-export class SettingsScreen extends React.Component {
-    render() {
-        return (
-            <View>
-
-            </View>
-        )
-    }
 }
 
 const styles = StyleSheet.create({
@@ -34,6 +24,9 @@ const styles = StyleSheet.create({
         width: 45
     },
     press: {
+
+    },
+    header: {
 
     }
 })

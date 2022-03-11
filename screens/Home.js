@@ -6,7 +6,7 @@ import Units from '../components/Units';
 import Settings from '../components/Settings';
 import Search from '../components/Search';
 
-export default function Home() {
+export default function Home({ navigation }) {
 
     const [selectedValue, setSelectedValue] = useState("Area");
     const [selectedUnit, setSelectedUnit] = useState("Square Miles");
@@ -27,7 +27,7 @@ export default function Home() {
         <View>
             <Header />
             <Search />
-            <Settings />
+            <Settings navigation={navigation} />
             <Conversion setConversionUnit={(conversion) => setSelectedValue(conversion)} />
             <View style={styles.hr} />
             <View style={styles.container}>

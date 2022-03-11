@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import { exp } from "react-native/Libraries/Animated/Easing";
 
-export default function Search() {
+export default function Search(props) {
     return (
         <View style={styles.searchBtn}>
             <TouchableOpacity style={styles.press}>
@@ -12,16 +12,6 @@ export default function Search() {
             </TouchableOpacity>
         </View>
     )
-}
-
-export class SearchScreen extends React.Component {
-    render() {
-        return (
-            <View>
-
-            </View>
-        )
-    }
 }
 
 const styles = StyleSheet.create({

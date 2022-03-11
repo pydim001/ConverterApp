@@ -5,9 +5,7 @@ import Navigator from "./routes/AppStack";
 
 export default function App() {
   return (
-    <View>
-      <Navigator />
-    </View>
+    <Navigator headerMode={false} />
   )
 }
 
