@@ -1,0 +1,17 @@
+{
+    "Area": "Square Meters",
+    "Currency": "US Dollars",
+    "Data Tranfer Rate": "Gigabit Per Second",
+    "Digital Storage": "Gigabyte",
+    "Energy": "Kilowatt hour",
+    "Frequency": "Gigahertz",
+    "Fuel Economy": "Kilometers per liter",
+    "Length": "Meter",
+    "Mass": "Kilogram",
+    "Plane Angle": "Radian",
+    "Pressure": "Standard atmosphere",
+    "Speed": "Meter per second",
+    "Temperature": "Celsius",
+    "Time": "Second",
+    "Volume": "Liter"
+}

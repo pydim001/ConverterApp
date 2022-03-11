@@ -64,13 +64,14 @@ const styles = StyleSheet.create({
         padding: 8,
         marginTop: 150,
         width: 175,
-        alignContent: 'center'
+        textAlign: 'center'
     },
     conversion: {
-        alignContent: 'center',
+        textAlign: 'center',
         borderWidth: 1,
-        paddingVertical: 8,
-        paddingHorizontal: 87.5,
+        width: 175,
+        height: 35,
+        paddingTop: 8,
         marginTop: 150,
     },
     switchBtn: {

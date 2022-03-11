@@ -10,7 +10,7 @@ export default function SettingScreen({ navigation }) {
                     onPress={() => { navigation.navigate('Home') }} />
             </View>
             <View style={styles.header}>
-                <Text>
+                <Text style={styles.txt}>
                     Settings
                 </Text>
             </View>
@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
     },
     back: {
         paddingTop: 50,
+        paddingLeft: 20,
         alignItems: 'flex-start'
+    },
+    txt: {
+        fontSize: 20
     }
 })
