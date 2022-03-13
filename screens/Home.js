@@ -6,6 +6,7 @@ import Units from '../components/Units';
 import Settings from '../components/Settings';
 import Search from '../components/Search';
 import Ideas from '../components/Ideas';
+import Custom from '../components/Custom';
 
 export default function Home({ navigation }) {
 
@@ -30,6 +31,7 @@ export default function Home({ navigation }) {
             <Search />
             <Settings navigation={navigation} />
             <Ideas navigation={navigation} />
+            <Custom navigation={navigation} />
             <Conversion setConversionUnit={(conversion) => setSelectedValue(conversion)} />
             <View style={styles.hr} />
             <View style={styles.container}>

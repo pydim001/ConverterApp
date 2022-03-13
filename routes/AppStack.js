@@ -3,6 +3,7 @@ import { createAppContainer } from "react-navigation";
 import HomeScreen from "../screens/Home";
 import ReviewScreen from "../screens/ReviewScreen";
 import SettingScreen from "../screens/SettingScreen";
+import CustomScreen from "../screens/CustomScreen";
 
 const screens = {
     Home: {
@@ -13,6 +14,9 @@ const screens = {
     },
     Reviews: {
         screen: ReviewScreen
+    },
+    Custom: {
+        screen: CustomScreen
     }
 }
 

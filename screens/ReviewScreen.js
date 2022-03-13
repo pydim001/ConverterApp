@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button, Touchable } from "react-native";
+import { StyleSheet, Text, View, Button, Touchable, Alert } from "react-native";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 
 export default function ReviewScreen({ navigation }) {
     const [req, setReq] = useState();
     const [review, setReview] = useState();
+
+    const submit = () => {
+        navigation.navigate('Home');
+        Alert.alert("Sent!", "Thank you very much for you response!", [
+            { text: "OK" }
+        ])
+    }
 
     return (
         <View>
@@ -37,7 +44,8 @@ export default function ReviewScreen({ navigation }) {
                     multiline={true}
                     onChangeText={val => setReview(val)} />
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity
+                onPress={submit}>
                 <View style={styles.submit}>
                     <Text>Submit</Text>
                 </View>
