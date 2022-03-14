@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button, Touchable, Alert } from "react-native";
+import { StyleSheet, Text, View, Button, Alert } from "react-native";
 import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
 
 export default function ReviewScreen({ navigation }) {
@@ -45,7 +45,8 @@ export default function ReviewScreen({ navigation }) {
                     onChangeText={val => setReview(val)} />
             </View>
             <TouchableOpacity
-                onPress={submit}>
+                onPress={submit}
+                style={styles.press}>
                 <View style={styles.submit}>
                     <Text>Submit</Text>
                 </View>

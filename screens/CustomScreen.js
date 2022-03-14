@@ -1,15 +1,35 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, Button, TouchableOpacity, Alert } from "react-native";
 import { TextInput } from "react-native-gesture-handler";
 import Conversion from "../components/Coversion";
 
 export default function CustomScreen({ navigation }) {
 
-    const [field, setField] = useState();
+    const [field, setField] = useState("Area");
     const [custom, setCustom] = useState();
+    const [rate, setRate] = useState();
+    let invalidRate = false;
+    const defaults = require("../assets/defaults.json");
+
 
     const submit = () => {
+        checkNum(rate);
+        if (!invalidRate) {
+            navigation.navigate('Home');
+        } else {
+            Alert.alert("Invalid Rate", "The rate has to be a number", [
+                { text: "OK" }
+            ])
+        }
+    }
 
+    const checkNum = (input) => {
+        const num = parseFloat(input);
+        if (num.toString() == "NaN") {
+            invalidRate = true;
+        } else {
+            setRate(num);
+        }
     }
 
     return (
@@ -33,6 +53,13 @@ export default function CustomScreen({ navigation }) {
                 <TextInput
                     style={styles.custom}
                     onChangeText={val => setCustom(val)}
+                    returnKeyType='done' />
+            </View>
+            <View>
+                <Text style={styles.customTxt}>How many {custom}s are in a {defaults[field]}</Text>
+                <TextInput
+                    style={styles.custom}
+                    onChangeText={val => setRate(val)}
                     returnKeyType='done' />
             </View>
             <TouchableOpacity onPress={submit}>
@@ -84,6 +111,7 @@ const styles = StyleSheet.create({
         marginRight: 20,
         backgroundColor: 'lightblue',
         padding: 10,
-        borderWidth: 1
+        borderWidth: 1,
+
     }
 })
