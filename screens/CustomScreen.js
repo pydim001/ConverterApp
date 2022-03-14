@@ -6,11 +6,15 @@ import Conversion from "../components/Coversion";
 export default function CustomScreen({ navigation }) {
 
     const [field, setField] = useState("Area");
-    const [custom, setCustom] = useState();
+    const [custom, setCustom] = useState("");
     const [rate, setRate] = useState();
     let invalidRate = false;
     const defaults = require("../assets/defaults.json");
 
+    const writeCustom = (file, fieldName, name, convertRate) => {
+        //const fs = require('fs');
+        //const readfile = require(file);
+    }
 
     const submit = () => {
         checkNum(rate);
@@ -29,6 +33,14 @@ export default function CustomScreen({ navigation }) {
             invalidRate = true;
         } else {
             setRate(num);
+        }
+    }
+
+    const checkUnit = (input) => {
+        if (input.length > 0) {
+            return input;
+        } else {
+            return "---"
         }
     }
 
@@ -56,16 +68,16 @@ export default function CustomScreen({ navigation }) {
                     returnKeyType='done' />
             </View>
             <View>
-                <Text style={styles.customTxt}>How many {custom}s are in a {defaults[field]}</Text>
+                <Text style={styles.customTxt}> How many {defaults[field]} are in a/an {checkUnit(custom)}?</Text>
                 <TextInput
                     style={styles.custom}
                     onChangeText={val => setRate(val)}
                     returnKeyType='done' />
             </View>
-            <TouchableOpacity onPress={submit}>
-                <View style={styles.submit}>
-                    <Text>Submit</Text>
-                </View>
+            <TouchableOpacity
+                onPress={submit}
+                style={styles.submit}>
+                <Text>Submit</Text>
             </TouchableOpacity>
         </View>
     )
