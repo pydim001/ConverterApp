@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "237710623873",
+    "project_id": "unitconverter-aea5c",
+    "storage_bucket": "unitconverter-aea5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237710623873:android:b0eac0f93806d7a5eeb980",
+        "android_client_info": {
+          "package_name": "com.aditya.unitconverter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237710623873-5q3feu8aqfu7numjhpafeu9p5g71aeqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4Qm-IXIgutBk648PfDVqpYqHP5rJFIYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237710623873-5q3feu8aqfu7numjhpafeu9p5g71aeqb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "237710623873-vgg06lndnrj7gtou6a3ullkeeepv94ci.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aditya.unit-converter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
