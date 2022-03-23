@@ -11,14 +11,21 @@ export default function CustomScreen({ navigation }) {
     let invalidRate = false;
     const defaults = require("../assets/defaults.json");
 
-    const writeCustom = (file, fieldName, name, convertRate) => {
-        //const fs = require('fs');
-        //const readfile = require(file);
+    const writeCustom = (fieldName, name, convertRate) => {
+        const writer = require('react-native-fs');
+        const readfile = require("../assets/custom.json");
+        let form = {};
+        let writable = {}
+        form[name] = convertRate;
+        writable[fieldName] = form;
+        readfile.push(writable);
+        writer.write(file, readfile);
     }
 
     const submit = () => {
         checkNum(rate);
         if (!invalidRate) {
+            //writeCustom(field, custom, rate);
             navigation.navigate('Home');
         } else {
             Alert.alert("Invalid Rate", "The rate has to be a number", [
@@ -72,6 +79,7 @@ export default function CustomScreen({ navigation }) {
                 <TextInput
                     style={styles.custom}
                     onChangeText={val => setRate(val)}
+                    keyboardType='numeric'
                     returnKeyType='done' />
             </View>
             <TouchableOpacity
