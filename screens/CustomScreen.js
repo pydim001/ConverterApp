@@ -12,7 +12,7 @@ export default function CustomScreen({ navigation }) {
     const defaults = require("../assets/defaults.json");
 
     const writeCustom = (fieldName, name, convertRate) => {
-        const writer = require('react-native-fs');
+        //const writer = require('react-native-fs');
         const readfile = require("../assets/custom.json");
         let form = {};
         let writable = {}

@@ -12,8 +12,7 @@ target 'ConverterApp' do
     :hermes_enabled => false
   )
 
-  platform :ios, '9.0'
-  pod 'Firebase/Core', '~> '
+
 
 
   target 'ConverterAppTests' do
