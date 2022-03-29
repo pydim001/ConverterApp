@@ -14,12 +14,29 @@ export default function CustomScreen({ navigation }) {
     const writeCustom = (fieldName, name, convertRate) => {
         const writer = require('react-native-fs');
         const readfile = require("../assets/custom.json");
+        const path = writer.DocumentDirectoryPath + '/assets/custom.json';
+        console.log(writer.CachesDirectoryPath)
+        console.log(writer.DocumentDirectoryPath)
+        console.log(writer.DownloadDirectoryPath)
+        console.log(writer.ExternalCachesDirectoryPath)
+        console.log(writer.ExternalDirectoryPath)
+        console.log(writer.ExternalStorageDirectoryPath)
+        console.log(writer.LibraryDirectoryPath)
+        console.log(writer.PicturesDirectoryPath)
+        console.log(writer.MainBundlePath)
+        console.log(path)
         let form = {};
         let writable = {}
         form[name] = convertRate;
         writable[fieldName] = form;
         readfile.push(writable);
-        writer.write("../assets/custom.json", readfile.toString());
+        writer.write(path, readfile.toString())
+            .then((success) => {
+                console.log('FILE WRITTEN!');
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
     }
 
     const submit = () => {
