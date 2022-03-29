@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
+import Widget from "../components/Widget";
 
 export default function SettingScreen({ navigation }) {
     return (
@@ -14,6 +15,11 @@ export default function SettingScreen({ navigation }) {
                     Settings
                 </Text>
             </View>
+            <Widget name="Color" />
+            <Widget name="Dark Mode" />
+            <Widget name="Step Size" />
+            <Widget name="Conversion Mode" />
+            <Widget name="Ordering" />
         </View>
 
     )
