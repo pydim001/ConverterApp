@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
         borderBottomColor: 'gray',
         borderBottomWidth: 0.5,
         width: 370,
-        marginTop: 15,
-        marginBottom: -10,
+        marginTop: 20,
+        marginBottom: 0,
         alignSelf: 'center'
     },
     textView: {

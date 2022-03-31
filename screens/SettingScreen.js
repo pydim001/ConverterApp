@@ -20,6 +20,7 @@ export default function SettingScreen({ navigation }) {
             <Widget name="Step Size" />
             <Widget name="Conversion Mode" />
             <Widget name="Ordering" />
+            <Widget name="Formula" />
         </View>
 
     )
