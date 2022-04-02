@@ -3,6 +3,7 @@ import { Switch } from "react-native";
 
 export default function SettingSwitch(props) {
 
+    //off is default
     const [mode, setMode] = useState(props.trackMode["off"]);
 
     return (
@@ -11,6 +12,7 @@ export default function SettingSwitch(props) {
                 trackColor={props.trackColor}
                 thumbColor={props.thumbColor}
                 onValueChange={setMode(curr => !curr)}
+                value={mode}
             />
         </View>
     )
