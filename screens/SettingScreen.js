@@ -1,6 +1,8 @@
 import React from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View, TextInput } from "react-native";
 import Widget from "../components/Widget";
+import ColorSwitch from "../components/ColorSwitch";
+import SettingSwitch from "../components/SettingSwitch"
 
 export default function SettingScreen({ navigation }) {
     return (
@@ -15,12 +17,12 @@ export default function SettingScreen({ navigation }) {
                     Settings
                 </Text>
             </View>
-            <Widget name="Color" />
-            <Widget name="Dark Mode" />
-            <Widget name="Step Size" />
-            <Widget name="Conversion Mode" />
-            <Widget name="Ordering" />
-            <Widget name="Formula" />
+            <Widget name="Color" component={ColorSwitch} />
+            <Widget name="Dark Mode" component={SettingSwitch} />
+            <Widget name="Step Size" component={TextInput} />
+            <Widget name="Conversion Mode" component={SettingSwitch} />
+            <Widget name="Ordering" component={SettingSwitch} />
+            <Widget name="Formula" component={SettingSwitch} />
         </View>
 
     )
