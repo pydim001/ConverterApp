@@ -14,7 +14,7 @@ export default function CustomScreen({ navigation }) {
     const writeCustom = (fieldName, name, convertRate) => {
         const writer = require('react-native-fs');
         const readfile = require("../assets/custom.json");
-        const path = writer.DocumentDirectoryPath + '/assets/custom.json';
+        const path = '../assets/custom.json';
         console.log(path)
         let form = {};
         let writable = {}

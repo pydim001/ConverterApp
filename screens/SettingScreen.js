@@ -23,6 +23,7 @@ export default function SettingScreen({ navigation }) {
             <Widget name="Conversion Mode" component={SettingSwitch} />
             <Widget name="Ordering" component={SettingSwitch} />
             <Widget name="Formula" component={SettingSwitch} />
+            <Widget name="Defaults" />
         </View>
 
     )
