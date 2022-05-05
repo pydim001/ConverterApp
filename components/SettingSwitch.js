@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Switch, View } from "react-native";
+import { Switch, View, StyleSheet } from "react-native";
 
 export default function SettingSwitch(props) {
 
@@ -13,6 +13,7 @@ export default function SettingSwitch(props) {
     return (
         <View>
             <Switch
+                style={styles.position}
                 trackColor={props.trackColor}
                 thumbColor={mode ? props.thumbColor[0] : props.thumbColor[1]}
                 onValueChange={swap}
@@ -21,3 +22,10 @@ export default function SettingSwitch(props) {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    position: {
+        marginTop: -30,
+        marginLeft: 250
+    }
+})
