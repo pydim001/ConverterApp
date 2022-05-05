@@ -17,12 +17,12 @@ export default function SettingScreen({ navigation }) {
                     Settings
                 </Text>
             </View>
-            <Widget name="Color" component={ColorSwitch} />
-            <Widget name="Dark Mode" component={SettingSwitch} />
-            <Widget name="Step Size" component={TextInput} />
-            <Widget name="Conversion Mode" component={SettingSwitch} />
-            <Widget name="Ordering" component={SettingSwitch} />
-            <Widget name="Formula" component={SettingSwitch} />
+            <Widget name="Color" component={<ColorSwitch />} />
+            <Widget name="Dark Mode" component={<SettingSwitch />} />
+            <Widget name="Step Size" component={<TextInput />} />
+            <Widget name="Conversion Mode" component={<SettingSwitch />} />
+            <Widget name="Ordering" component={<SettingSwitch />} />
+            <Widget name="Formula" component={<SettingSwitch />} />
             <Widget name="Defaults" />
         </View>
 

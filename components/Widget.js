@@ -8,6 +8,7 @@ export default function Widget(props) {
             <View style={styles.hr} />
             <View style={styles.textView}>
                 <Text style={styles.txt}>{props.name}</Text>
+                {props.component}
             </View>
         </View>
     )
