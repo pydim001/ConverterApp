@@ -18,11 +18,11 @@ export default function SettingScreen({ navigation }) {
                 </Text>
             </View>
             <Widget name="Color" component={<ColorSwitch />} />
-            <Widget name="Dark Mode" component={<SettingSwitch />} />
+            <Widget name="Dark Mode" component={<SettingSwitch trackColor={{ false: "red", true: "green" }} thumbColor={["red", "yellow"]} />} />
             <Widget name="Step Size" component={<TextInput />} />
-            <Widget name="Conversion Mode" component={<SettingSwitch />} />
-            <Widget name="Ordering" component={<SettingSwitch />} />
-            <Widget name="Formula" component={<SettingSwitch />} />
+            <Widget name="Conversion Mode" component={<SettingSwitch trackColor={{ false: "red", true: "green" }} thumbColor={["red", "yellow"]} />} />
+            <Widget name="Ordering" component={<SettingSwitch trackColor={{ false: "red", true: "green" }} thumbColor={["red", "yellow"]} />} />
+            <Widget name="Formula" component={<SettingSwitch trackColor={{ false: "red", true: "green" }} thumbColor={["red", "yellow"]} />} />
             <Widget name="Defaults" />
         </View>
 
