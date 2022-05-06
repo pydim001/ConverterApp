@@ -5,11 +5,10 @@ export default function SettingSwitch(props) {
 
     //false is default
     const [mode, setMode] = useState(false);
+    props.do(mode)
 
     const swap = () => {
         setMode(curr => !curr)
-        console.log(mode)
-        props.do(mode)
     }
 
     return (

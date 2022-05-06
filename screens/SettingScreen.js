@@ -10,9 +10,9 @@ export default function SettingScreen({ navigation }) {
     const [convMode, setConvMode] = useState(false);
     const [orderMode, setOrderMode] = useState(false);
     const [formulaMode, setFormulaMode] = useState(false);
+    const [stepSize, setStepSize] = useState(0.0);
 
     const save = () => {
-        console.log(darkMode)
         dark(darkMode);
         order(orderMode);
         formula(formulaMode);
@@ -56,7 +56,8 @@ export default function SettingScreen({ navigation }) {
                     do={curr => setDarkMode(curr)} />} />
             <Widget name="Step Size"
                 component={<TextInput
-                    style={styles.stepSize} />} />
+                    style={styles.stepSize}
+                    onChangeText={val => setStepSize(val)} />} />
             <Widget name="Conversion Mode"
                 component={<SettingSwitch
                     trackColor={{ false: "black", true: "black" }}
