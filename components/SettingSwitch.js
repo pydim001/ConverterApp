@@ -3,11 +3,13 @@ import { Switch, View, StyleSheet } from "react-native";
 
 export default function SettingSwitch(props) {
 
-    //off is default
+    //false is default
     const [mode, setMode] = useState(false);
 
     const swap = () => {
         setMode(curr => !curr)
+        console.log(mode)
+        props.do(mode)
     }
 
     return (

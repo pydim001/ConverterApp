@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from "react-native";
 import Widget from "../components/Widget";
 import ColorSwitch from "../components/ColorSwitch";
@@ -6,7 +6,32 @@ import SettingSwitch from "../components/SettingSwitch"
 
 export default function SettingScreen({ navigation }) {
 
+    const [darkMode, setDarkMode] = useState(false);
+    const [convMode, setConvMode] = useState(false);
+    const [orderMode, setOrderMode] = useState(false);
+    const [formulaMode, setFormulaMode] = useState(false);
+
     const save = () => {
+        console.log(darkMode)
+        dark(darkMode);
+        order(orderMode);
+        formula(formulaMode);
+        convert(convMode);
+    }
+
+    const dark = (curr) => {
+
+    }
+
+    const order = (curr) => {
+
+    }
+
+    const formula = (curr) => {
+
+    }
+
+    const convert = (curr) => {
 
     }
 
@@ -22,17 +47,36 @@ export default function SettingScreen({ navigation }) {
                     Settings
                 </Text>
             </View>
-            <Widget name="Color" component={<ColorSwitch />} />
-            <Widget name="Dark Mode" component={<SettingSwitch trackColor={{ false: "black", true: "black" }} thumbColor={["lightblue", "lightblue"]} />} />
-            <Widget name="Step Size" component={<TextInput style={styles.stepSize} />} />
-            <Widget name="Conversion Mode" component={<SettingSwitch trackColor={{ false: "black", true: "black" }} thumbColor={["lightblue", "lightblue"]} />} />
-            <Widget name="Ordering" component={<SettingSwitch trackColor={{ false: "black", true: "black" }} thumbColor={["lightblue", "lightblue"]} />} />
-            <Widget name="Formula" component={<SettingSwitch trackColor={{ false: "black", true: "black" }} thumbColor={["lightblue", "lightblue"]} />} />
+            <Widget name="Color"
+                component={<ColorSwitch />} />
+            <Widget name="Dark Mode"
+                component={<SettingSwitch
+                    trackColor={{ false: "red", true: "black" }}
+                    thumbColor={["lightblue", "lightblue"]}
+                    do={curr => setDarkMode(curr)} />} />
+            <Widget name="Step Size"
+                component={<TextInput
+                    style={styles.stepSize} />} />
+            <Widget name="Conversion Mode"
+                component={<SettingSwitch
+                    trackColor={{ false: "black", true: "black" }}
+                    thumbColor={["lightblue", "lightblue"]}
+                    do={curr => setConvMode(curr)} />} />
+            <Widget name="Ordering"
+                component={<SettingSwitch
+                    trackColor={{ false: "black", true: "black" }}
+                    thumbColor={["lightblue", "lightblue"]}
+                    do={curr => setOrderMode(curr)} />} />
+            <Widget name="Formula"
+                component={<SettingSwitch
+                    trackColor={{ false: "black", true: "black" }}
+                    thumbColor={["lightblue", "lightblue"]}
+                    do={curr => setFormulaMode(curr)} />} />
             <Widget name="Defaults" />
             <TouchableOpacity
                 onPress={save}
                 style={styles.save}>
-                <Text>Submit</Text>
+                <Text>Save</Text>
             </TouchableOpacity>
         </View>
 
