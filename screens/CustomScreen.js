@@ -8,6 +8,7 @@ export default function CustomScreen({ navigation }) {
     const [field, setField] = useState("Area");
     const [custom, setCustom] = useState("");
     const [rate, setRate] = useState();
+    const units = require("../assets/fields.json");
     let invalidRate = false;
     const defaults = require("../assets/defaults.json");
 
@@ -73,7 +74,9 @@ export default function CustomScreen({ navigation }) {
             </View>
             <View style={styles.hr} />
             <View>
-                <Conversion setConversionUnit={conversion => setField(conversion)} />
+                <Conversion
+                    setChangedValue={conversion => setField(conversion)}
+                    items={units} />
             </View>
             <View>
                 <Text style={styles.customTxt}>Enter a Custom Unit you want to add</Text>

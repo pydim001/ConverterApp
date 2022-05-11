@@ -32,7 +32,9 @@ export default function Home({ navigation }) {
             <Settings navigation={navigation} />
             <Ideas navigation={navigation} />
             <Custom navigation={navigation} />
-            <Conversion setConversionUnit={(conversion) => setSelectedValue(conversion)} />
+            <Conversion
+                setChangedValue={(conversion) => setSelectedValue(conversion)}
+                items={units} />
             <View style={styles.hr} />
             <View style={styles.container}>
                 <Units unit={selectedValue} />
