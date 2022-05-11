@@ -4,7 +4,7 @@ import { View, TouchableOpacity, StyleSheet } from 'react-native';
 export default function ColorSwitch(props) {
 
     const palette = () => {
-
+        props.navigation.navigate('Palette');
     }
 
     return (

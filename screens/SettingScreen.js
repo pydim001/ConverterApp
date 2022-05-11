@@ -48,7 +48,7 @@ export default function SettingScreen({ navigation }) {
                 </Text>
             </View>
             <Widget name="Color"
-                component={<ColorSwitch />} />
+                component={<ColorSwitch navigation={navigation} />} />
             <Widget name="Dark Mode"
                 component={<SettingSwitch
                     trackColor={{ false: "red", true: "black" }}
