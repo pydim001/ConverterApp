@@ -7,7 +7,7 @@ export default function Palette({ navigation }) {
 
     const colorTypes = ["Hexadecimal", "RGB", "HSL"];
     const [colVal, setColVal] = useState(colorTypes[0]);
-    const [colorTheme, setColorTheme] = useState();
+    const [color, setColor] = useState();
     const colStyles = { "Hexadecimal": styles.hex, "RGB": styles.rgb, "HSL": styles.hsl };
 
     return (
@@ -40,9 +40,19 @@ const styles = StyleSheet.create({
         padding: 5
     },
     rgb: {
-
+        alignSelf: 'center',
+        textAlign: 'center',
+        borderBottomWidth: 1,
+        marginTop: 50,
+        width: 70,
+        padding: 5
     },
     hsl: {
-
+        alignSelf: 'center',
+        textAlign: 'center',
+        borderBottomWidth: 1,
+        marginTop: 50,
+        width: 70,
+        padding: 5
     }
 })
