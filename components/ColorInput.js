@@ -6,14 +6,7 @@ export default function ColorInput(props) {
     const [color, setColor] = useState();
 
     const save = () => {
-        switch (props.type) {
-            case "Hexadecimal":
-                break;
-            case "RGB":
-                break;
-            case "HSL":
-                break;
-        }
+
     }
 
     if (props.type == "Hexadecimal") {
@@ -28,7 +21,9 @@ export default function ColorInput(props) {
                     maxLength={6}
                     onChangeText={val => { setHex(val) }} />
                 <TouchableOpacity
-                    onPress={save}
+                    onPress={() => {
+                        setColor(hex);
+                    }}
                     style={styles.save}>
                     <Text>Save</Text>
                 </TouchableOpacity>
