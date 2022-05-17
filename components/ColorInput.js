@@ -1,16 +1,46 @@
-import React from "react";
-import { TextInput, View, Text, StyleSheet } from "react-native";
+import React, { useState } from "react";
+import { TextInput, View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default function ColorInput(props) {
+
+    const [color, setColor] = useState();
+
+    const save = () => {
+        switch (props.type) {
+            case "Hexadecimal":
+                break;
+            case "RGB":
+                break;
+            case "HSL":
+                break;
+        }
+    }
+
     if (props.type == "Hexadecimal") {
+
+        const [hex, setHex] = useState();
+
         return (
             <View>
                 <Text style={styles.hash}>#</Text>
-                <TextInput style={props.style} maxLength={6} />
+                <TextInput
+                    style={props.style}
+                    maxLength={6}
+                    onChangeText={val => { setHex(val) }} />
+                <TouchableOpacity
+                    onPress={save}
+                    style={styles.save}>
+                    <Text>Save</Text>
+                </TouchableOpacity>
             </View>
         );
     }
     else if (props.type == "RGB") {
+
+        const [r, setR] = useState();
+        const [g, setG] = useState();
+        const [b, setB] = useState();
+
         return (
             <View>
                 <TextInput
@@ -31,6 +61,11 @@ export default function ColorInput(props) {
                 <Text style={styles.r}>R</Text>
                 <Text style={styles.g}>G</Text>
                 <Text style={styles.b}>B</Text>
+                <TouchableOpacity
+                    onPress={save}
+                    style={styles.save}>
+                    <Text>Save</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -57,6 +92,11 @@ export default function ColorInput(props) {
                 <Text style={styles.l}>L</Text>
                 <Text style={styles.satPer}>%</Text>
                 <Text style={styles.lightPer}>%</Text>
+                <TouchableOpacity
+                    onPress={save}
+                    style={styles.save}>
+                    <Text>Save</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -132,5 +172,13 @@ const styles = StyleSheet.create({
         fontSize: 20,
         marginLeft: 335,
         width: 50
+    },
+    save: {
+        marginTop: 30,
+        alignSelf: 'flex-end',
+        marginRight: 20,
+        backgroundColor: 'lightblue',
+        padding: 10,
+        borderWidth: 1
     }
 })
