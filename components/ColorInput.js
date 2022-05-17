@@ -6,16 +6,28 @@ export default function ColorInput(props) {
         return (
             <View>
                 <Text style={styles.hash}>#</Text>
-                <TextInput style={props.style} />
+                <TextInput style={props.style} maxLength={6} />
             </View>
         );
     }
     else if (props.type == "RGB") {
         return (
             <View>
-                <TextInput style={{ ...props.style, ...styles.rgbRed }} />
-                <TextInput style={{ ...props.style, ...styles.rgbGreen }} />
-                <TextInput style={{ ...props.style, ...styles.rgbBlue }} />
+                <TextInput
+                    style={{ ...props.style, ...styles.rgbRed }}
+                    maxLength={3}
+                    keyboardType='numeric'
+                    returnKeyType='done' />
+                <TextInput
+                    style={{ ...props.style, ...styles.rgbGreen }}
+                    maxLength={3}
+                    keyboardType='numeric'
+                    returnKeyType='done' />
+                <TextInput
+                    style={{ ...props.style, ...styles.rgbBlue }}
+                    maxLength={3}
+                    keyboardType='numeric'
+                    returnKeyType='done' />
                 <Text style={styles.r}>R</Text>
                 <Text style={styles.g}>G</Text>
                 <Text style={styles.b}>B</Text>
@@ -25,14 +37,26 @@ export default function ColorInput(props) {
     else if (props.type == "HSL") {
         return (
             <View>
-                <TextInput style={{ ...props.style, ...styles.hslHue }} />
-                <TextInput style={{ ...props.style, ...styles.hslSat }} />
-                <TextInput style={{ ...props.style, ...styles.hslLight }} />
+                <TextInput
+                    style={{ ...props.style, ...styles.hslHue }}
+                    maxLength={3}
+                    keyboardType='numeric'
+                    returnKeyType='done' />
+                <TextInput
+                    style={{ ...props.style, ...styles.hslSat }}
+                    maxLength={3}
+                    keyboardType='numeric'
+                    returnKeyType='done' />
+                <TextInput
+                    style={{ ...props.style, ...styles.hslLight }}
+                    maxLength={3}
+                    keyboardType='numeric'
+                    returnKeyType='done' />
                 <Text style={styles.h}>H</Text>
                 <Text style={styles.s}>S</Text>
                 <Text style={styles.l}>L</Text>
-                <Text>%</Text>
-                <Text>%</Text>
+                <Text style={styles.satPer}>%</Text>
+                <Text style={styles.lightPer}>%</Text>
             </View>
         );
     }
@@ -75,11 +99,13 @@ const styles = StyleSheet.create({
         marginTop: 70
     },
     hslSat: {
-        marginTop: -28
+        marginTop: -28,
+        width: 100
     },
     hslLight: {
         marginTop: -28,
-        marginLeft: 200
+        marginLeft: 220,
+        width: 100
     },
     h: {
         fontSize: 20,
@@ -93,12 +119,18 @@ const styles = StyleSheet.create({
     l: {
         fontSize: 20,
         marginTop: -24,
-        marginLeft: 290
+        marginLeft: 300
     },
     satPer: {
-        fontSize: 20
+        marginTop: -50,
+        fontSize: 20,
+        marginLeft: 230,
+        width: 50
     },
     lightPer: {
-        fontSize: 20
+        marginTop: -22,
+        fontSize: 20,
+        marginLeft: 335,
+        width: 50
     }
 })
