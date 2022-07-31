@@ -9,9 +9,9 @@ export default function ColorInput(props) {
 
     }
 
-    if (props.type == "Hexadecimal") {
+    const [hex, setHex] = useState();
 
-        const [hex, setHex] = useState();
+    if (props.type === "Hexadecimal") {
 
         return (
             <View>
@@ -30,11 +30,11 @@ export default function ColorInput(props) {
             </View>
         );
     }
-    else if (props.type == "RGB") {
+    else if (props.type === "RGB") {
 
-        const [r, setR] = useState();
-        const [g, setG] = useState();
-        const [b, setB] = useState();
+        //const [r, setR] = useState("");
+        //const [g, setG] = useState("");
+        //const [b, setB] = useState("");
 
         return (
             <View>
@@ -64,7 +64,7 @@ export default function ColorInput(props) {
             </View>
         );
     }
-    else if (props.type == "HSL") {
+    else if (props.type === "HSL") {
         return (
             <View>
                 <TextInput
@@ -94,6 +94,12 @@ export default function ColorInput(props) {
                 </TouchableOpacity>
             </View>
         );
+    } else {
+        return (
+            <View>
+
+            </View>
+        )
     }
 }
 
