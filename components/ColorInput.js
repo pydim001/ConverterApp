@@ -11,6 +11,10 @@ export default function ColorInput(props) {
 
     const [hex, setHex] = useState();
 
+    const [r, setR] = useState("");
+    const [g, setG] = useState("");
+    const [b, setB] = useState("");
+
     if (props.type === "Hexadecimal") {
 
         return (
@@ -31,10 +35,6 @@ export default function ColorInput(props) {
         );
     }
     else if (props.type === "RGB") {
-
-        //const [r, setR] = useState("");
-        //const [g, setG] = useState("");
-        //const [b, setB] = useState("");
 
         return (
             <View>
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
         width: 50
     },
     save: {
-        marginTop: 30,
+        marginTop: 50,
         alignSelf: 'flex-end',
         marginRight: 20,
         backgroundColor: 'lightblue',

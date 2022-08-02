@@ -1,5 +1,14 @@
 {
-    "Area": {},
+    "Area": {
+        "Square Inch": 1550,
+        "Square Foot": 10.7639,
+        "Square Yard": 1.19599,
+        "Square Meters": 1,
+        "Square Kilometer": 0.000001,
+        "Square Miles": 0.0000003681,
+        "Hectare": 0.0001,
+        "Acre": 0.000247105
+    },
     "Currency": {},
     "Data Tranfer Rate": {},
     "Digital Storage": {},
@@ -9,7 +18,13 @@
     "Length": {},
     "Mass": {},
     "Plane Angle": {},
-    "Pressure": {},
+    "Pressure": {
+        "Standard atmosphere": 1,
+        "Bar": 1.01325,
+        "Pounds per square inch": 14.6959,
+        "Torr": 760,
+        "Pascal": 101325
+    },
     "Speed": {},
     "Temperature": {},
     "Time": {},
