@@ -3,6 +3,7 @@ import { Button, StyleSheet, Text, View, TextInput, TouchableOpacity } from "rea
 import Widget from "../components/Widget";
 import ColorSwitch from "../components/ColorSwitch";
 import SettingSwitch from "../components/SettingSwitch"
+import Arrow from "../components/Arrow"
 
 export default function SettingScreen({ navigation }) {
 
@@ -73,7 +74,7 @@ export default function SettingScreen({ navigation }) {
                     trackColor={{ false: "black", true: "black" }}
                     thumbColor={["lightblue", "lightblue"]}
                     do={curr => setFormulaMode(curr)} />} />
-            <Widget name="Defaults" />
+            <Widget name="Defaults" component={<Arrow />} />
             <TouchableOpacity
                 onPress={save}
                 style={styles.save}>

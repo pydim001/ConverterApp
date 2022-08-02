@@ -12,25 +12,6 @@ export default function CustomScreen({ navigation }) {
     let invalidRate = false;
     const defaults = require("../assets/defaults.json");
 
-    const writeCustom = (fieldName, name, convertRate) => {
-        const writer = require('react-native-fs');
-        const readfile = require("../assets/custom.json");
-        const path = '../assets/custom.json';
-        console.log(path)
-        let form = {};
-        let writable = {}
-        form[name] = convertRate;
-        writable[fieldName] = form;
-        readfile.push(writable);
-        writer.write(path, readfile.toString())
-            .then((success) => {
-                console.log('FILE WRITTEN!');
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
-    }
-
     const submit = () => {
         checkNum(rate);
         if (!invalidRate) {
