@@ -5,6 +5,7 @@ import ReviewScreen from "../screens/ReviewScreen";
 import SettingScreen from "../screens/SettingScreen";
 import CustomScreen from "../screens/CustomScreen";
 import PaletteScreen from "../screens/Palette";
+import DefaultScreen from "../screens/DefaultScreen";
 
 const screens = {
     Home: {
@@ -21,6 +22,9 @@ const screens = {
     },
     Palette: {
         screen: PaletteScreen
+    },
+    Default: {
+        screen: DefaultScreen
     }
 }
 
