@@ -24,3 +24,15 @@ export const validHex = (hex) => {
         }
     } return true;
 }
+
+export const convert = (field, unit1, unit2, quan) => {
+    const converter = require("./assets/rates.json");
+    const simFields = require("./assets/simplefields.json");
+    const compFields = require("./assets/compfields.json");
+    const varFields = require("./assets/varfields.json");
+    if (simFields.includes(field)) {
+        const cf = converter[field];
+        return quan / cf[unit1] * sf[unit2];
+    }
+}
+
