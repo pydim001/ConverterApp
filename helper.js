@@ -32,7 +32,12 @@ export const convert = (field, unit1, unit2, quan) => {
     const varFields = require("./assets/varfields.json");
     if (simFields.includes(field)) {
         const cf = converter[field];
-        return quan / cf[unit1] * sf[unit2];
+        return quan / cf[unit1] * cf[unit2];
     }
 }
 
+export const getFormula = (field, unit1, unit2) => {
+    const rates = require("./assets/rates.json");
+    const cf = rates[field];
+    return cf[unit2] / cf[unit1];
+}

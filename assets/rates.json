@@ -14,10 +14,22 @@
     "Digital Storage": {},
     "Energy": {},
     "Frequency": {},
-    "Fuel Economy": {},
+    "Fuel Economy": {
+        "Miles per Gallon": 2.35215,
+        "Miles per Gallon (Imp)": 2.82481,
+        "Kilometers per liter": 1,
+        "Liters per 100 kilometer": 100
+    },
     "Length": {},
     "Mass": {},
-    "Plane Angle": {},
+    "Plane Angle": {
+        "Milliradian": 1000,
+        "Radian": 1,
+        "Degree": 57.2958,
+        "Gradian": 63.662,
+        "Minute of arc": 3437.75,
+        "Second of arc": 206265
+    },
     "Pressure": {
         "Standard atmosphere": 1,
         "Bar": 1.01325,
@@ -25,7 +37,13 @@
         "Torr": 760,
         "Pascal": 101325
     },
-    "Speed": {},
+    "Speed": {
+        "Meter per second": 1,
+        "Knot": 1.94384,
+        "Miles per hour": 2.23694,
+        "Foot per second": 3.28084,
+        "Kilometer per hour": 3.6
+    },
     "Temperature": {},
     "Time": {},
     "Volume": {}

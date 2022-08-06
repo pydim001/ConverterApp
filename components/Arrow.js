@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     arrow: {
         width: 30,
         height: 30,
-        marginTop: -25,
+        marginTop: -26,
         marginLeft: 260
     }
 })

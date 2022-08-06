@@ -7,6 +7,8 @@ import Settings from '../components/Settings';
 import Search from '../components/Search';
 import Ideas from '../components/Ideas';
 import Custom from '../components/Custom';
+import Formula from '../components/Formula';
+import { getFormula } from '../helper';
 
 export default function Home({ navigation }) {
 
@@ -53,6 +55,9 @@ export default function Home({ navigation }) {
             <View style={styles.container}>
                 <Units unit={selectedValue} />
                 <Text style={styles.conversion}>{converted}</Text>
+            </View>
+            <View>
+                <Formula rate={getFormula(selectedValue, selectedUnit, secondUnit)} />
             </View>
         </View>
     );
