@@ -9,7 +9,6 @@
         "Hectare": 0.0001,
         "Acre": 0.000247105
     },
-    "Currency": {},
     "Data Tranfer Rate": {},
     "Digital Storage": {},
     "Energy": {},
@@ -44,7 +43,24 @@
         "Foot per second": 3.28084,
         "Kilometer per hour": 3.6
     },
-    "Temperature": {},
+    "Temperature": {
+        "Celsius": [
+            1,
+            0
+        ],
+        "Farenheit": [
+            1.8,
+            32
+        ],
+        "Kelvin": [
+            1,
+            273.15
+        ],
+        "Rankine": [
+            1.8,
+            491.67
+        ]
+    },
     "Time": {},
     "Volume": {}
 }

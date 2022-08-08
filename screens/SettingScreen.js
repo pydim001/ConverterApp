@@ -74,7 +74,7 @@ export default function SettingScreen({ navigation }) {
                     trackColor={{ false: "black", true: "black" }}
                     thumbColor={["lightblue", "lightblue"]}
                     do={curr => setFormulaMode(curr)} />} />
-            <Widget name="Defaults" component={<Arrow />} />
+            <Widget name="Defaults" component={<Arrow navigation={navigation} />} />
             <TouchableOpacity
                 onPress={save}
                 style={styles.save}>

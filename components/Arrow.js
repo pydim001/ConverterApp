@@ -5,13 +5,11 @@ import { block } from 'react-native-reanimated';
 
 export default function Arrow(props) {
 
-    const goDefault = () => {
-
-    }
+    const goDefault = () => { props.navigation.navigate('Default'); }
 
     return (
         <View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={goDefault}>
                 <Image source={arrow} style={styles.arrow} />
             </TouchableOpacity>
         </View>
